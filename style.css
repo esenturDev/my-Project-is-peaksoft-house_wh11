@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+}
+
+.parent{
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+  left: -100px;
+  top: -100px;
+}
+
+.parent img{
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  border-radius: 45px;
+  position: absolute;
+  top: 60px;
+  left: 110px;
+  transform: rotate(-45deg);
+}
+
+.header {
+  width: 1300px;
+  height: 745px;
+  background-color: hwb(51 61% 3%);
+}
+
+img:hover{
+  display: block;
+  transform: scale(1.3);
+  text-shadow: 0px 0px 10px black;
+}
+.people{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 0 0;
+  font-size: 300%;
+  font-weight: 900;
+  color: blue;
+}
+.children{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 0;
+  font-size: 130%;
+  font-weight: 900;
+  color: orange;
+}
+.text_11 {
+  position: absolute;
+  top: 650px;
+  left: 520px;
+  font-size: 18px;
+}
+.main {
+  width: 400px;
+  height: 745px;
+  background-color: hsl(51, 60%, 75%);
+  display: flex;
+  justify-content: center;
+}
+.night-light-label {
+  display: block;
+  margin: 20px 0;
+  height: 31px;
+  width: 60px;
+  border: 2px solid #4672FE;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.night-light-label .night-light-ball {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  background: #4672FE;
+  z-index: 99;
+  transition: 300ms;
+}
+.sun-svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.moon-svg,
+.sun-svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title {
+  font-size: 30px;
+  font-weight: 900;
+}
+.box_button {
+  position: relative;
+  width: 100%;
+  height: 35px;
+}
+.text_center {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+footer{
+  position: absolute;
+  top: 90%;
+  background-color: blueviolet;
+  width: 100%;
+  height: 10%;
+}
+
+.footer h2{
+  position: absolute;
+  left: 220px;
+  top: 25px;
+  color: rgb(204, 174, 135);
+  font-size: 25px;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 20px;
+  }
+  50% {
+    font-size: 30px;
+  }
+  100% {
+    font-size: 20px;
+  }
+}
+.pulse:hover {
+  animation: pulse 1.5s infinite;
+  color: purple;
+}
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.swing:hover {
+  animation: swing 0.1s ease-in-out 0s infinite;
+  color: purple;
+}
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+.heartBeat:hover {
+  animation: beat 0.25s infinite alternate;
+  transform-origin: center;
+  color: purple;
+}
+@keyframes backinup {
+  30% {
+    transform: translateY(-150px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+.backInDown:hover {
+  animation: backinup 2s ease-in-out infinite;
+  color: purple;
+}
+.backOutRight:hover {
+  animation: backout 2s ease-in-out;
+  color: purple;
+}
+@keyframes backout {
+  30% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.bounceInLeft:hover {
+  animation: bounceInLeft 1s;
+  color: purple;
+}
+@keyframes bounceInLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(30px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.fadeInDown:hover {
+  animation: fadeInDown 1s;
+  color: purple;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeinBottomLeft:hover {
+  animation: fadeinBottom 1s;
+  color: purple;
+}
+.flip:hover {
+  animation: flip 2s;
+  color: purple;
+}
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+.lightSpeedOutLeft:hover {
+  animation: lightSpeedOutLeft 2s;
+  color: purple;
+}
+@keyframes lightSpeedOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+}
+.rotateInUpRight:hover {
+  animation: rotateInUpRight 1s;
+}
+
+.hinge:hover {
+  color: purple;
+  animation: hinge 2s ease;
+}
+@keyframes hinge {
+  0% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(80deg);
+  }
+  40%,
+  80% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+  }
+}
+.zoomOutDown:hover {
+  animation: zoomOutDown 1s ease;
+  color: purple;
+}
+@keyframes zoomOutDown {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: center bottom;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+    transform-origin: center bottom;
+  }
+}
